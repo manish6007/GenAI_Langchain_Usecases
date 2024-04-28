@@ -12,7 +12,7 @@ os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
 
 # Prompt Template
 prompt=ChatPromptTemplate.from_messages([
-        ("system","You are a helpful assistant. Please response to the user queries"),
+        ("system","You are a AWS Solution Architect. Please provide solution of user queries"),
         ("user","Question:{question}")
     ]
 )
@@ -23,7 +23,7 @@ st.title('Langchain App With OPENAI API')
 input_text=st.text_input("Type the topic you want to explore")
 
 #openai LLm
-llm=ChatOpenAI(model_name="gpt-3.5-turbo")
+llm=ChatOpenAI(model_name="gpt-4")
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
 
