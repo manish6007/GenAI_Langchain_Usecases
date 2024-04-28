@@ -2,6 +2,8 @@
 
 This is a conversational AI application built using OpenAI's GPT-4 and Streamlit. The app enables interactive chats with the language model using gradient-based techniques.
 
+![ChatGPT Clone](./images/image.jpg)
+
 **Code Explanation**
 
 The application imports Streamlit and OpenAI libraries. Streamlit is used for UI development and OpenAI library is used to interact with the OpenAI API.
