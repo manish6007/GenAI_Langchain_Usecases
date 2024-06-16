@@ -1,0 +1,65 @@
+Amazon Code Whisperer is renamed as Amazon Q Developer. All the functionality of CodeWhisperer is now provided as part of Amazon Q Developer. Users of Amazon Q Developer can get generative AI–powered inline code suggestions in the IDE or command line, security vulnerability scanning, and security vulnerability remediation.
+
+Important Points:
+	• Amazon Q Developer currently supports VS Code and IntelliJ IDEs.
+	• To get most relevant information from Amazon Q:
+		• Provide relevant information regarding the programming languages, frameworks, and tools being used for your tasks.
+		• Break down complex problems into smaller components for targeted assistance.
+		• Request clarifications from Amazon Q Developer if an answer is unclear.
+		• Experiment and iterate on your questions and prompts.
+		• Use the Amazon Q Developer customization capability (preview) to make it aware of your internal libraries, APIs, best practices, and architectural patterns to generate more relevant inline code recommendations.
+	• Amazon Q Developer uses the current conversational context, including questions asked and answers and code generated in the conversation panel.
+	• It also uses the IDE context, which includes the selected code line, snippet, or functions in the file, and the repository that the developers are currently working on.
+	• Amazon Q stores user activity data related to responses to the answers and code suggestions for Code Whisperer Professional users.
+	• The Code Whisperer Professional service uses user's content like code snippets, comments, and content from files open in the IDE solely to maintain and provide the service.
+	• For users accessing Amazon Q Developer through no charge plans, like CodeWhisperer Individual tier, Amazon may use their questions or responses for model training.
+	• Users can opt out of using content from Amazon Q Developer for service improvement.
+	• Content processed by CodeWhisperer Professional is not stored or used for service improvement or for model training.
+	• For detailed information on data collection and usage, refer to CodeWhisperer Professional FAQs and CodeWhisperer Individual FAQs respectively.
+	• Amazon Q Developer Agent for software development:
+		•  With the Amazon Q Developer Agent for software development, you can go from a natural language prompt to an application feature with interactive step-by-step instructions right from your IDE or with CodeCatalyst. Amazon Q Developer understands your workspace structure and breaks down your prompt into logical implementation steps, which can include generating application code, tests, API integrations, and more. You can collaborate with Amazon Q Developer to review and iterate on the implementation. When ready, you can ask Amazon Q Developer Agent for software development to implement each step.
+		• To get started, open up a new or existing project and enter /dev in the Amazon Q chat panel. A new chat tab opens where you interact with Amazon Q to generate an implementation plan and new code for your feature
+		
+		From <https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/software-dev.html> 
+	
+	• Supported Languages: 
+		• Available as part of the AWS Toolkit for VS Code and JetBrains, Amazon Q Developer currently supports conversations in English, and the Python, Java, JavaScript, TypeScript, C#, Go, Rust, PHP, Ruby, Kotlin, C, C++, Shell scripting, SQL, and Scala programming languages.
+		• Amazon Q Developer is part of the AWS Toolkit for Visual Studio (VS) Code and JetBrains.
+		• It currently supports programming languages including Python, Java, JavaScript, TypeScript, C#, Go, Rust, PHP, Ruby, Kotlin, C, C++, Shell scripting, SQL, Scala, JSON, YAML, and HCL.
+		• It is compatible with multiple IDEs, including VS Code, JetBrains family of IDEs (IntelliJ, PyCharm, GoLand, CLion, PhpStorm, RubyMine, Rider, WebStorm, DataGrip, Visual Studio), AWS Cloud9, the Lambda console, JupyterLab, and Amazon SageMaker Studio.
+		• Amazon Q Developer is also available for command lines, including macOS terminal, iTerm2, and the built-in VS Code terminal.
+		
+	• Amazon Q Developer Agent for code transformation supports upgrades of Java version 8 and version 11 applications to version 17.
+	• Amazon Q Developer reference tracker:
+		• The Amazon Q Developer reference tracker detects if a code suggestion might be similar to publicly available code.
+		• It can flag such suggestions with a repository URL and project license information or optionally filter them out.
+		• Users can then more easily find and review the referenced code to see how it is used in the context of another project before deciding to use it.
+		• All references are logged for future review to ensure that the code flow is not disturbed, and coding can continue without interruption.
+		• You can prevent Amazon Q Developer from recommending code with code references by deselecting the 'Include Suggestions With Code References' option in the configuration setting.
+		• For Amazon Q Developer Free Tier users, this setting is available in the IDE.
+		• For Amazon Q Developer Pro users, the AWS administrator can configure this setting on an organization level from the console.
+	• Content is transmitted using the TLS protocol to ensure secure communication between your IDE and the Amazon Q Developer service.
+	• The content is encrypted during transit to prevent eavesdropping or man-in-the-middle attacks.
+	• For Amazon Q Developer Free Tier users, content might be retained for the purpose of service improvement, based on user's settings.
+	• This content is stored in a secured manner with encryption at rest and strict access controls.
+	• AI–powered code remediation capability:
+			§ You can scan your code to identify hard-to-find security vulnerabilities and get code suggestions to help remediate the identified issues.
+			§ Built-in security scanning can detect issues like exposed credentials and log injection.
+			§ Generative AI-powered code suggestions, tailored to your application code, can help remediate identified vulnerabilities.
+			§ Security scanning is available for several languages including Java, Python, JavaScript, TypeScript, C#, AWS CloudFormation (YAML, JSON), AWS CDK (TypeScript, Python), and HashiCorp Terraform (HCL).
+			§ Code suggestions for remediation of vulnerabilities are currently available for code written in Java, Python, and JavaScript.
+	• Amazon Q Developer is a tool for command line designed to increase productivity
+	• It provides contextual CLI completions, inline documentation
+	• Features AI natural language-to-bash translation
+	• It integrates with the developer's existing command line
+	• Does not require changing existing tools for developers to benefit from its features.
+	• Aimed at helping developers work more efficiently in the command line environment.
+	• Yes, CLI completions can be turned off.
+	• This can be done by running cw to open the settings page.
+	• From the settings page, the "CLI Completions" tab should be selected.
+	• To turn off completions, the switch in the top-right corner of the page must be toggled to "Off".
+	• With the Amazon Q Developer customization capability, you can customize Amazon Q Developer to generate more relevant recommendations by making it aware of your internal libraries, APIs, best practices, and architectural patterns.
+	• Currently, you can customize Amazon Q Developer recommendations on code bases written in Java, JavaScript, TypeScript, and Python. Files written in other languages supported by Amazon Q Developer (C#, Go, Rust, PHP, Ruby, Kotlin, C, C++, Shell scripting, SQL, and Scala) will not be used when creating the customization or when providing customized recommendations in the IDE based on your internal code repositories.
+	• During the preview, you can use the customization capability to create up to eight customizations based on your internal code bases. You can keep up to two code customizations active at the same time.
+	
+From <https://aws.amazon.com/q/developer/faqs/> 

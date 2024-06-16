@@ -1,0 +1,158 @@
+What is Amazon Bedrock?
+	• Amazon Bedrock is a fully-managed service for building generative AI applications.
+	• It offers a selection of high-performing foundation models.
+	• Amazon Bedrock provides security, privacy, and responsible AI.
+	• It allows using top foundation models, customization with private data via fine-tuning and retrieval-augmented generation (RAG).
+	• The service allows creating managed agents to execute complex business tasks without writing any code.
+	• Tasks can range from booking travel and processing insurance claims to creating ad campaigns and managing inventory.
+	• Amazon Bedrock is serverless, hence no need to manage any infrastructure.
+	• It can be securely integrated into your applications using familiar AWS services.
+
+The Foundation Models (FMs) available in Amazon Bedrock are as follows:
+
+	• Anthropic's Claude
+	• AI21 Labs' Jurassic-2
+	• Stability AI's Stable Diffusion
+	• Cohere's Command and Embed
+	• Meta's Llama 2,3
+	• Amazon Titan language and embeddings models.
+	• Mistral AI
+
+Amazon Bedrock is recommended for building generative AI applications for five reasons:
+	• Choice of FMs: Amazon Bedrock provides access to top-performing FMs from Amazon and leading AI companies. It allows experimentation with different models and requires minimal code changes to keep up with latest model versions.
+	• Easy model customization: Users can customize FMs with their own data. Training and validation datasets from Amazon S3 can be selected and hyperparameters tweaked to enhance model performance.
+	• Fully managed agents for complex tasks: Amazon Bedrock allows the creation of agents that execute complex business tasks by calling company systems and APIs.
+	• Native support for Retrieval Augmented Generation: Amazon Bedrock enables FMs to connect securely to proprietary data sources, enhancing their capabilities and domain-specific knowledge.
+	• Data security and compliance: Amazon Bedrock supports security, privacy requirements and common compliance standards such as SOC, ISO, HIPAA and GDPR. Furthermore, it is CSA STAR Level 2 certified, ensuring best practices for security. Data is always encrypted, and traffic is kept private using AWS PrivateLink or VPC endpoint.
+	
+You can quickly get started with use cases:
+	• Create new pieces of original content, such as short stories, essays, social media posts, and web page copy.
+	• Search, find, and synthesize information to answer questions from a large corpus of data.
+	• Create realistic and artistic images of various subjects, environments, and scenes from language prompts.
+	• Help customers find what they’re looking for with more relevant and contextual product recommendations than word matching.
+	• Get a summary of textual content such as articles, blog posts, books, and documents to get the gist without having to read the full content.
+
+The list of regions are as follows:
+
+	• US East (N. Virginia)
+	• US West (Oregon)
+	• Asia Pacific (Singapore)
+	• Asia Pacific (Sydney)
+	• Asia Pacific (Tokyo)
+	• Europe (Frankfurt)
+	• Europe (Paris)
+	• Europe (Ireland)
+	• Asia Pacific (Mumbai)
+	• AWS GovCloud (US-West)
+
+To customize a model on Amazon Bedrock
+
+	1. Provide the training and validation dataset: This is the data that the model will learn from. Training data is used to teach the model, and validation data is used to verify the model's accuracy.
+	2. Configure hyperparameters: You can set various parameters including epochs (number of complete passes through the dataset), batch size (number of training samples processed before the model is updated), learning rate (size of the steps the model takes to reach the optimal solution), and warmup steps (initial steps where the learning rate is gradually increased to prevent early convergence).
+	3. Submit the job: After setting up the dataset and hyperparameters, submit the job for the model to start learning.
+	4. Access the fine-tuned model: Once the model has been trained, it can be accessed using the InvokeModel API, which allows you to use the model for predictions.
+
+Agents:
+
+	• Agents for Amazon Bedrock are fully managed capabilities used to create generative AI applications.
+	• They can execute complex tasks across a wide range of use cases.
+	• They automatically breakdown tasks and create an orchestration plan without any manual coding.
+	• They securely connect to company data via an API, converting data into a machine-readable format.
+	• They augment the request with relevant information to generate the most accurate response.
+	• They are capable of automatically calling APIs to fulfil a user’s request.
+	• They can be leveraged for tasks like tracking inventory levels, sales data, supply chain info, and recommending optimal reorder points and quantities.
+	• They eliminate the need for managing system integration and infrastructure provisioning, allowing developers to fully utilize generative AI.
+	• Agents for Amazon Bedrock can help you increase productivity, improve your customer service experience, or automate DevOps tasks.
+	
+To connect Foundation Models (FMs) to your company data sources on Amazon Bedrock, you need to:
+	1. Use the Agents for Amazon Bedrock which are designed to facilitate this connection securely.
+	2. Set up a knowledge base to provide the Agents and the FMs access to additional data. This extra data helps the model to generate more relevant, context-specific responses without continuous retraining.
+	3. The Agents then use user input to identify the appropriate knowledge base, retrieve relevant information and add this additional information to the input prompt. This additional context helps the model to generate a more accurate completion.
+	4. Remember, the information retrieved from your company's data sources is kept secure and is only used to provide the model with context for its tasks.
+	
+Security:
+	• Any customer content processed by Amazon Bedrock is encrypted and stored at rest in the AWS Region where you are using Amazon Bedrock.
+	• Amazon Bedrock supports the following security and compliance standards:
+		○ Service and Organization Control (SOC): Bedrock is in scope for SOC 1, 2, 3 reports, providing insights into Amazon's security controls via third-party audits.
+		○ International Organization for Standardization (ISO): It falls under ISO Compliance for standards like ISO 9001, ISO 27001, ISO 27017, ISO 27018, ISO 27701, ISO 22301, and ISO 20000.
+		○ Health Insurance Portability and Accountability Act (HIPAA) Eligibility: Bedrock can be used in a manner compliant with HIPAA regulations.
+		○ General Data Protection Regulation (GDPR): Amazon Bedrock complies with GDPR, ensuring the protection of data and privacy for customers in the European Union.
+		○ CSA STAR Level 2 certified: Bedrock's security practices have been validated against the best practices outlined by CSA Security Trust Assurance and Risk (STAR) Level 2.
+		○ AWS PrivateLink support: Users can establish private connectivity from Amazon Virtual Private Cloud (VPC) to Amazon Bedrock, without exposing data to internet traffic.
+		○ Data Privacy: Content is not used to improve base models nor is it shared with any model providers, respecting user's data privacy.
+
+SDK:
+	• Amazon Bedrock supports SDKs for runtime services. iOS and Android SDKs, as well as Java, JS, Python, CLI, .Net, Ruby, PHP, Go, and C++, support both text and speech input.
+	• Streaming is supported in all the SDKs.
+
+Pricing Model:
+
+Amazon Bedrock pricing models include:
+	• On-Demand: Only pay for what you use with no time-based commitments. Charges are per input token processed/output token generated for text-generation models, and per input token processed for embeddings models. For image-generation models, the charges are for every image generated.
+	• Batch: Input a set of prompts as a single file and get responses as a single output file for large-scale predictions simultaneously. The pricing for this batch model is the same as On-Demand.
+	• Provisioned Throughput: Purchase model units for a specific base or custom model. Designed for consistent inference workloads that needs guaranteed throughput. Provisioned Throughput pricing is charged by the hour with a choice of 1-month or 6-month commitment terms.
+	• Model Customization: Pay for model training based on the total number of tokens processed by the model. Model storage is charged per month per model. Customized models can only be accessed using the Provisioned Throughput plan.
+	• Model Evaluation: Only pay for what you use, with no volume commitments. For automatic evaluation, only pay for the inference from your chosen model. For human-based evaluation, charges apply for the model inference in the evaluation and a charge of $0.21 per completed human task. There is no separate charge for the workforce, as this is provided by the users themselves. For an evaluation managed by AWS, pricing is customized for the evaluation needs.
+
+Depending on your AWS Support contract, Amazon Bedrock is supported under Developer Support, Business Support and Enterprise Support plans.
+You can use CloudWatch metrics to track the inputs and output token.
+
+Customization:
+To securely use your data to customize Foundation Models (FMs) available through Amazon Bedrock, you can follow these steps:
+	1. Private Customization: Amazon Bedrock allows you to privately customize FMs. This means you retain full control over your data, how it is used and encryption.
+	2. Separate Copy for Customization: Amazon Bedrock creates a separate copy of the base FM for customization. This separate copy is then trained using your data, hence securing the original model against unauthorized modifications.
+	3. Secure Data Storage and Processing: All your data including prompts, supplemental prompt information, and FM responses are securely stored and processed.
+	4. Regionally Stored Customized FMs: The customized FMs remain in the region where the API call is processed, limiting data transfer to other regions and further enhancing security.
+
+Amazon Bedrock ensures the privacy and confidentiality of your data used in fine-tuning through the following measures:
+	1. Data Isolation: Your data is never exposed to the public internet or leaves the AWS network, providing an isolated environment for fine-tuning the model.
+	2. Secure Transfer: Your data is securely transferred through your Virtual Private Cloud (VPC), ensuring it does not transit through any public or less secure networks.
+	3. Data Encryption: All your data, both in transit and at rest, is encrypted. This prevents any unauthorized access or usage of your data.
+	4. AWS Access Controls: Amazon Bedrock enforces the same robust AWS access controls as all other AWS services. This ensures the privacy and secure handling of your data during the fine-tuning process.
+
+Amazon Bedrock does support continued pretraining. This feature is available for Amazon Titan Text Express and Amazon Titan models. Continued pretraining allows you to further pretrain the base model using large quantities of unlabeled data. This process helps adapt the model from a general domain corpus to a more specific one, such as medical, law, finance, etc., while still retaining the main capabilities of the original Amazon Titan base model.
+
+Knowledge Base:
+	1. Accepted Data Formats: Knowledge Bases for Amazon Bedrock accepts several data formats, including .pdf, .txt, .md, .html, .doc and .docx, .csv, .xls, .xlsx files. Files should be stored on Amazon S3.
+	2. Document Chunking Options:
+		a. Default option: Knowledge Bases for Amazon Bedrock automatically splits your document into chunks each containing 200 tokens, ensuring that a sentence is not broken in the middle. If a document contains less than 200 tokens, then it is not split any further. An overlap of 20% of tokens is maintained between two consecutive chunks.
+		b. Fixed size chunking: In this option, you can specify the maximum number of tokens per chunk and the overlap percentage between chunks for Knowledge Bases for Amazon Bedrock, so your document will be automatically split into chunks, ensuring that a sentence is not broken in the middle. 
+		c. Create one embedding per document option: Amazon Bedrock creates one embedding per document. This option is suitable if you have pre-processed your documents by splitting them into separate files and do not want Amazon Bedrock to further chunk your documents.
+	3. Embeddings Model: At present, Knowledge Bases for Amazon Bedrock uses the latest version of the Amazon Titan Text Embeddings model available in Amazon Bedrock. The Amazon Titan Text Embeddings model supports 8K tokens and 25+ languages and creates embeddings of 1,536 dimension size. 
+	4. Vector Database Support: Various databases are supported, including vector engine for Amazon OpenSearch Serverless, Pinecone, Redis Enterprise Cloud, Amazon Aurora (coming soon), and MongoDB (coming soon).
+	If you do not have an existing vector database, Amazon Bedrock creates an OpenSearch Serverless vector store for you.
+	5. Depending on your use case, you can use Amazon Event-Bridge to create a periodic or event-driven sync between Amazon S3 and Knowledge Bases for Amazon Bedrock.
+
+Model Evaluation: Model Evaluation on Amazon Bedrock is a feature that allows you to evaluate, compare, and select the most suitable Foundation Model (FM) for your use case.
+Key features of Model Evaluation on Amazon Bedrock include:
+	1. Automatic Evaluation: Amazon Bedrock offers automatic evaluation using predefined metrics such as accuracy, robustness, and toxicity to assess the model.
+	2. Human Evaluation: For subjective or custom metrics like friendliness, style, or brand voice alignment, Amazon Bedrock provided human evaluation workflow. You can utilize in-house employee teams or an AWS-managed team to perform these evaluations.
+	3. Flexible Dataset Options: Amazon Bedrock provides built-in curated datasets for evaluation or allows you to use your own datasets for a more personalized evaluation process.
+These features make the evaluation process simpler, ensuring you choose the most effective FM for your specific use case.
+
+How does automatic evaluation work?
+You can quickly evaluate Amazon Bedrock models for metrics such as accuracy, robustness, and toxicity by using curated built-in data sets or by bringing your own prompt datasets. After your prompt datasets are sent to Amazon Bedrock models for inference, the model responses are scored with evaluation algorithms for each dimension. The backend engine aggregates individual prompt response scores into summary scores and presents them through easy-to-understand visual reports.
+
+How does human evaluation work?
+Amazon Bedrock allows you to set up human review workflows in a few short steps and bring your in-house employees, or use an expert team managed by AWS, to evaluate models. Through Amazon Bedrock’s intuitive interface, humans can review and give feedback on model responses by clicking thumbs up or down, rating on a scale of 1-5, choosing the best of multiple responses, or ranking prompts. For example, a team member can be shown how two models respond to the same prompt, and then be asked to select the model that shows more accurate, relevant, or stylistic outputs. You can specify the evaluation criteria that matter to you by customizing the instructions and buttons to appear on the evaluation UI for your team. You can also provide detailed instructions with examples and the overall goal of model evaluation, so users can align their work accordingly. This method is useful to evaluate subjective criteria that require human judgement or more nuanced subject matter expertise and that cannot be easily judged by automatic evaluations.
+
+Responsible AI
+
+Guardrails for Amazon Bedrock:
+	• Guardrails for Amazon Bedrock are tools to implement safeguards for generative AI applications.
+	• They help control user and Functional Models (FMs) interactions by filtering harmful content.
+	• They will soon enable the redaction of personally identifiable information to enhance privacy.
+	• Guardrails can be tailored to specific use cases with different configurations.
+	• They allow continual monitoring and analysis of user inputs and FM responses to identify any violations of customer-defined policies.
+	• Safeguards in Guardrails for Amazon Bedrock include setting up policies to control generative AI applications.
+	• "Denied topics" can be set to avoid undesired discussions.
+	• Content filters can be configured to filter harmful content like hate speech, insults, sexually explicit content, and violence.
+	• A future feature will introduce word filters to block certain words in user inputs and FM-generated responses.
+	• There's also an upcoming feature for personally identifiable information (PII) redaction in FM-generated responses, along with the capacity to block any user input containing PII.
+	• AWS offers an uncapped intellectual property (IP) indemnity covering copyright claims from generative output of specific Amazon generative AI services like Amazon Titan models and Amazon CodeWhisperer Professional.
+	• This indemnity covers customers against third-party allegations of copyright infringement by the output generated by these AI services in response to customer-provided input or data.
+	• However, customers must also use the services responsibly, such as not inputting infringing data or disabling a service’s filtering features.
+	• The standard IP indemnity offered by AWS also protects customers from third-party claims alleging IP infringement by the services and the data used to train them.
+
+
+
